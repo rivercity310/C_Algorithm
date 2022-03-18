@@ -1,0 +1,15 @@
+   
+## 폴더 무시
+Debug/
+x64/
+
+## 확장자 무시
+*.exe
+*.obj
+*.sin
+*.cod
+*.log
+*.tlog  
+*.vcxproj
+*.filters
+*.user
