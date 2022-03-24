@@ -16,4 +16,15 @@ void prime1();
 void prime2();
 void prime3();
 
+void doy();
+void Physical();
+void Physic();
+
+void search();
+void fpointer();
+void bsearch_();
+
+void IntStack_();
+void IntQueue_();
+void RingBuffer_();
 #endif
