@@ -1,5 +1,6 @@
+#include <stdio.h>
 #include "test.h"
 
 int main() {
-	RingBuffer_();
+	fib_();
 }

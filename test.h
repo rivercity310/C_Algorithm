@@ -27,4 +27,7 @@ void bsearch_();
 void IntStack_();
 void IntQueue_();
 void RingBuffer_();
+
+void fact_();
+void fib_();
 #endif
