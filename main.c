@@ -1,6 +1,5 @@
-#include <stdio.h>
 #include "test.h"
 
-int main() {
-	bSort_();
+void main() {
+	iSort_();
 }

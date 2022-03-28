@@ -37,5 +37,7 @@ void eight_look_();
 void eight_queen_();
 
 void bSort_();
+void selectionSort_();
+void iSort_();
 
 #endif

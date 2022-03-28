@@ -3,33 +3,37 @@
 각 행렬에 1개의 퀸을 배치하는 조합을 재귀적으로 나열
 */
 
-int flag[8];     // 각 행 체크
-int pos[8];      // 각 열에서 퀸의 위치
+typedef struct {
+	int flag[8];
+	int pos[8];
+} Ck;
 
-void print() {
+Ck ck;
+
+void print_look() {
 	for (int i = 0; i < 8; i++)
-		printf("%2d", pos[i]);
+		printf("%2d", ck.pos[i]);
 	putchar('\n');
 }
 
-void set(int i) {
+void set_look(int i) {
 	for (int j = 0; j < 8; j++) {
-		if (!flag[j]) {		// j행에 퀸이 배치되지 않았다면
-			pos[i] = j;
+		if (!ck.flag[j]) {		// j행에 퀸이 배치되지 않았다면
+			ck.pos[i] = j;
 			if (i == 7)     // 모든 열에 배치 완료
-				print();
+				print_look();
 		}
 		else {
-			flag[j] = 1;
-			set(i + 1);
-			flag[j] = 0;
+			ck.flag[j] = 1;
+			set_look(i + 1);
+			ck.flag[j] = 0;
 		}
 	}
 }
 
 void eight_look_() {
 	for (int i = 0; i < 8; i++)
-		flag[i] = 0;
+		ck.flag[i] = 0;
 
-	set(0);
+	set_look(0);
 }
