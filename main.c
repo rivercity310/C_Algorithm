@@ -2,5 +2,5 @@
 #include "test.h"
 
 int main() {
-	fib_();
+	bSort_();
 }

@@ -30,4 +30,12 @@ void RingBuffer_();
 
 void fact_();
 void fib_();
+void euclid_();
+void recur_();
+void hanoi_();
+void eight_look_();
+void eight_queen_();
+
+void bSort_();
+
 #endif
