@@ -1,5 +1,5 @@
 #include "test.h"
 
-void main() {
-	iSort_();
+int main() {
+	qs2_();
 }

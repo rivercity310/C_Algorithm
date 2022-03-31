@@ -39,5 +39,11 @@ void eight_queen_();
 void bSort_();
 void selectionSort_();
 void iSort_();
+void shell_();
+
+void partition_test();
+void quickSort_();
+void qs_();
+void qs2_();
 
 #endif

@@ -11,7 +11,7 @@
 그러다 선택한 값 이하의 요소를 만나면 그보다 앞쪽은 검사할 필요가 없으므로 해당 위치에 삽입할 값 대입
 */
 
-void insertSort(int a[], int n) {
+void insertSort_(int a[], int n) {
 	int i, j;
 	for (i = 0; i < n; i++) {
 		int temp = a[i];
@@ -19,6 +19,17 @@ void insertSort(int a[], int n) {
 			a[j] = a[j - 1];
 
 		a[j] = temp;
+	}
+}
+
+void insertSort(int* a, int n) {
+	int i, j;
+	for (i = 0; i < n; i++) {
+		int tmp = a[i];
+		for (j = i; j > 0 && a[j - 1] > tmp; j--)
+			a[j] = a[j - 1];
+
+		a[j] = tmp;
 	}
 }
 
