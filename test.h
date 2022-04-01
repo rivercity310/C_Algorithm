@@ -46,4 +46,7 @@ void quickSort_();
 void qs_();
 void qs2_();
 
+void mAry_();
+void mSort_();
+
 #endif
