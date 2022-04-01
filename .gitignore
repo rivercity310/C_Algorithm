@@ -2,10 +2,12 @@
 Debug/
 x64/
 .vs/
+C_Algorithm/
 
 ## 확장자 무시
 *.exe
 *.obj
+*.sln
 *.sin
 *.cod
 *.log
@@ -14,3 +16,5 @@ x64/
 *.filters
 *.user
 *.ipch
+*.gitignore
+*.suo
