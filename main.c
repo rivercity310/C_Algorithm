@@ -1,5 +1,5 @@
 #include "test.h"
 
 int main() {
-	fsort_();
+	intSet2_();
 }

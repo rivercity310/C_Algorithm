@@ -51,4 +51,7 @@ void mSort_();
 void heapSort_();
 void fsort_();
 
+void intSet_();
+void intSet2_();
+
 #endif
