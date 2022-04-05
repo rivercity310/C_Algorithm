@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 /*
 [ 배열 병합 ]
@@ -10,13 +9,13 @@
 정렬을 수행합니다.
 */
 
-void mergeAry(const int a[], int na, const int b[], int nb, int c[]) {
+void mergeAry(const int* a, int na, const int* b, int nb, int* c) {
 	int pa = 0;
 	int pb = 0;
 	int pc = 0;
 
 	while (pa < na && pb < nb)
-		c[pc++] = (a[pa] <= b[pb]) ? a[pa++] : b[pb++];
+		c[pc++] = a[pa] <= b[pb] ? a[pa++] : b[pb++];
 
 	while (pa < na)
 		c[pc++] = a[pa++];
@@ -26,38 +25,41 @@ void mergeAry(const int a[], int na, const int b[], int nb, int c[]) {
 }
 
 void mAry_() {
-	srand((size_t)time(NULL));
-	int na, nb;
+	int na, nb, i;
 
 	printf("a의 요소 개수: "); scanf_s("%d", &na);
 	printf("b의 요소 개수: "); scanf_s("%d", &nb);
 
-	int* a = calloc(na, sizeof(int));
-	int* b = calloc(na, sizeof(int));
+	int* a = (int*)malloc(na * sizeof(int));
+	int* b = (int*)malloc(na * sizeof(int));
 	int* c = (int*)malloc((na + nb) * sizeof(int));
 
-	printf("a[0]: "); scanf_s("%d", &a[0]);
-	for (int i = 1; i < na; i++) {
-		do {
-			printf("a[%d]: ", i);
-			scanf_s("%d", &a[i]);
-		} while (a[i] < a[i - 1]);
+	for (i = 0; i < na; i++) {
+		printf("a[%d]: ", i);
+		scanf_s("%d", (a + i));
+
+		if (i >= 1 && a[i] < a[i - 1]) {
+			printf("오름차순으로 입력해주세요!\n");
+			i--;
+		}
 	}
 
-	printf("b[0]: "); scanf_s("%d", &b[0]);
-	for (int i = 1; i < nb; i++) {
-		do {
-			printf("b[%d]: ", i);
-			scanf_s("%d", &b[i]);
-		} while (b[i] < b[i - 1]);
+	for (i = 0; i < nb; i++) {
+		printf("b[%d]: ", i);
+		scanf_s("%d", (b + i));
+
+		if (i >= 1 && b[i] < b[i - 1]) {
+			printf("오름차순으로 입력해주세요!\n");
+			i--;
+		}
 	}
 
 	mergeAry(a, na, b, nb, c);
 	puts("배열 a와 b를 병합하여 배열 c에 저장했습니다.");
-	for (int i = 0; i < na + nb; i++)
+	for (i = 0; i < na + nb; i++)
 		printf("c[%d] = %d\n", i, c[i]);
 
-	free(a); 
-	free(b); 
-	free(c);
+	// 0번째 인덱스의 값이 동적으로 할당받은 힙 영역이 아닌 데이터 영역에 존재하면 에러 발생!
+	// (do - while 문을 사용하기 위해 a[0] 또는 b[0]을 먼저 입력받은 경우)
+	free(a); free(b); free(c);
 }

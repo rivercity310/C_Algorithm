@@ -48,5 +48,7 @@ void qs2_();
 
 void mAry_();
 void mSort_();
+void heapSort_();
+void fsort_();
 
 #endif

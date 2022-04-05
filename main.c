@@ -1,5 +1,5 @@
 #include "test.h"
 
 int main() {
-	mSort_();
+	fsort_();
 }
