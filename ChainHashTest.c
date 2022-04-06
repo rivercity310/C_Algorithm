@@ -4,20 +4,20 @@
 
 typedef enum {
 	TERMINATE, ADD, DELETE, SEARCH, CLEAR, DUMP
-} Menu;
+} Menu_;
 
-Menu SelectMenu_() {
+Menu_ SelectMenu__() {
 	int ch;
 	do {
 		printf("(1)추가 (2)삭제 (3)검색 (4)모두 삭제 (5)덤프 (0)종료 : ");
 		scanf_s("%d", &ch);
 	} while (ch < TERMINATE || ch > DUMP);
 
-	return (Menu)ch;
+	return (Menu_)ch;
 }
 
 void cht_() {
-	Menu menu;
+	Menu_ Menu_;
 	ChainHash hash;
 	Initialize_Chain(&hash, 13);       // 해시 테이블 초기화
 
@@ -26,7 +26,7 @@ void cht_() {
 		Member x;
 		Node* temp;
 
-		switch (menu = SelectMenu_()) {
+		switch (Menu_ = SelectMenu__()) {
 		case ADD:
 		{
 			x = ScanMember("추가", MEMBER_NO | MEMBER_NAME);
@@ -74,7 +74,7 @@ void cht_() {
 		}
 
 		}
-	} while (menu != TERMINATE);
+	} while (Menu_ != TERMINATE);
 
 	Terminate_Chain(&hash);
 }

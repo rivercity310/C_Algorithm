@@ -14,7 +14,7 @@ void PrintMember(const Member* x) {
 	printf("%d %s", x->no, x->name);
 }
 
-void PrintLnMember(const Member* x) {
+void PrintlnMember(const Member* x) {
 	printf("%d %s\n", x->no, x->name);
 }
 
