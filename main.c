@@ -1,5 +1,5 @@
 #include "test.h"
 
 int main() {
-	intSet2_();
+	str_();
 }

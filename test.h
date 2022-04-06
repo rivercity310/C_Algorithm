@@ -53,5 +53,9 @@ void fsort_();
 
 void intSet_();
 void intSet2_();
+void BitSet_();
+
+void str_dump_();
+void str_();
 
 #endif
