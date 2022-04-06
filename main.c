@@ -1,5 +1,5 @@
 #include "test.h"
 
 int main() {
-	str_();
+	strstr_();
 }

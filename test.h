@@ -56,6 +56,6 @@ void intSet2_();
 void BitSet_();
 
 void str_dump_();
-void str_();
-
+void bf_();
+void strstr_();
 #endif
