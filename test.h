@@ -58,4 +58,8 @@ void BitSet_();
 void str_dump_();
 void bf_();
 void strstr_();
+
+void linear_list_();
+
+void cht_();
 #endif
