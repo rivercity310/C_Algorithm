@@ -28,7 +28,7 @@ void bsearch_() {
 	do {
 		Person temp, * p;
 		printf("이름: ");
-		scanf_s("%s", temp.name, 10);
+		scanf_s("%s", temp.name, (unsigned int)sizeof(temp.name));
 		p = bsearch(&temp, x, nx, sizeof(Person), (int(*)(const void*, const void*)) npcmp);
 
 		if (p == NULL) puts("검색 실패!");

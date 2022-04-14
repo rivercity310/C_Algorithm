@@ -17,7 +17,7 @@ Menu_ SelectMenu__() {
 }
 
 void cht_() {
-	Menu_ Menu_;
+	Menu_ m;
 	ChainHash hash;
 	Initialize_Chain(&hash, 13);       // 해시 테이블 초기화
 
@@ -26,7 +26,7 @@ void cht_() {
 		Member x;
 		Node* temp;
 
-		switch (Menu_ = SelectMenu__()) {
+		switch (m = SelectMenu__()) {
 		case ADD:
 		{
 			x = ScanMember("추가", MEMBER_NO | MEMBER_NAME);
@@ -74,7 +74,7 @@ void cht_() {
 		}
 
 		}
-	} while (Menu_ != TERMINATE);
+	} while (m != TERMINATE);
 
 	Terminate_Chain(&hash);
 }

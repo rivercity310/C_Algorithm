@@ -62,4 +62,6 @@ void strstr_();
 void linear_list_();
 
 void cht_();
+
+void llt_();
 #endif
