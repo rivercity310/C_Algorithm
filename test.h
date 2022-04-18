@@ -64,4 +64,5 @@ void linear_list_();
 void cht_();
 
 void llt_();
+void allt_();
 #endif

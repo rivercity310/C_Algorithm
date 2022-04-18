@@ -1,18 +1,5 @@
 #include "test.h"
 
 int main() {
-	llt_();
+	allt_();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

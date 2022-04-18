@@ -18,13 +18,14 @@ Menu_LL SelectMenu_LL() {
 
 	do {
 		for (i = TERMINATE; i < CLEAR; i++) {
-			printf("(%2d) %-18.18s ", i + 1, mstring[i]);
+			printf("(%02d) %-18.18s ", i + 1, mstring[i]);
 			if (i % 3 == 2)
 				putchar('\n');
 		}
 
 		printf("( 0) Á¾·á : ");
 		scanf_s("%d", &ch);
+		puts("\n");
 	} while (ch < TERMINATE || ch > CLEAR);
 
 	return (Menu_LL)ch;
@@ -89,6 +90,8 @@ void llt_() {
 			Clear_LL(&list);
 			break;
 		}
+
+		puts("\n");
 	} while (menu != TERMINATE);
 
 	Terminate_LL(&list);
